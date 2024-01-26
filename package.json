@@ -7,7 +7,8 @@
     "node": ">=18"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
+    "knex": "node --no-warnings --import tsx ./node_modules/.bin/knex",
     "dev": "tsx watch src/server.ts",
     "build": "tsup src --out-dir build"
   },
@@ -24,9 +25,12 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.5",
+    "@types/supertest": "^6.0.2",
     "sqlite3": "^5.1.7",
+    "supertest": "^6.3.4",
     "tsup": "^8.0.1",
     "tsx": "^4.7.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
   }
 }
